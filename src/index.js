@@ -2,51 +2,49 @@
 import { render } from "@testing-library/react"
 import React from "react"
 import ReactDOM from "react-dom"
-
-//NESTED COMPONENT DAN TOOLS
+import "./index.css"
 /*
-yang perlu diingat pada react sekali lagi hanya ada 1 buah kluaran 
-dari jsx utk dirender,nah jika banyak komponent bagaimana krena 
-hal ini maka dijadikan function2 
-nah ada function utama dibawah ini disebutkan 
-Mycomponent adalah 1 buah function utama yg berisi jsx yg dirender nntinya 
-nah didalamnya dia mis ada anak2 componentlainnya misalkan 
-function Mesagge(){ return ()}
-function Person (){return()}
-nah jadi dalam fucntion utama tadi function2 yg merupaka anak di 
-taruh sbgai element didalam funtion utama ! 
-function Mycomponent( {
-  return ( 
-    <> //jangan lupa pasang fragment karna harus ada 1 tag kluaran sbagai pembungkus  ]
-    <Person/>
-    <Message/>
-    </>
-  )
-})
-
-
+jadi kita buat buku list img source dari amazon 
+nah utk masukan css kita buat file tersendiri 
+utk css itu nama filenya harsu lengkap dengan eaxtensionnya 
 
 */
 
-const MyComponent = () => {
+const Booklist = () => {
   return (
-    <>
-      <Person />
-      <Message />
-    </>
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   )
 }
 
-const Person = () => {
+const Book = () => {
   return (
-    <div>
-      {" "}
-      <h2>nama Indara</h2>
-    </div>
+    <article className='book'>
+      <ImageBook />
+      <Title />
+
+      <Author />
+    </article>
   )
 }
-const Message = () => {
-  return <h1>hello message baru ini !</h1>
-}
 
-ReactDOM.render(<MyComponent />, document.getElementById("root"))
+const Title = () => <h1>This is very good book</h1>
+const ImageBook = () => {
+  return (
+    <img
+      src='https://images-na.ssl-images-amazon.com/images/I/81Jg8HF-N1L._AC_UL127_SR127,127_.jpg'
+      alt='bookFavorite01'
+    />
+  )
+}
+const Author = () => <h4> Mr.Cooker</h4>
+
+ReactDOM.render(<Booklist />, document.getElementById("root"))

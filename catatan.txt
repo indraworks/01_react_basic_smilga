@@ -26,3 +26,20 @@ import ReactDOM from 'react-dom'
 RULE JS
 
 
+////catatan mini Book Project ////
+sekaran kit aganti function utamanya 
+nah nanti kita akan buat semacam card ambil data dari image dari amazon
+utk title dan lainy akita tentukan sendiri
+jadi ada buku 
+imge buku ,harga buku author 
+nah utk booklist merupaka umpulan dari individu2 component /function sbd:
+ingat component adalah function yg berisi tag html yg return 
+
+function BookList () {
+    return ( 
+        <BookTitle/>
+        <image/>
+        <author/>
+        <
+    )
+}
