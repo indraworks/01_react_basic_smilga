@@ -5,11 +5,24 @@ import ReactDOM from "react-dom"
 
 //ini component yg dikembalikan
 function MyComponent() {
-  //harus ada retrun dari component /func yg dibuat
-  return <h1>Hello Indra iam compnent which render !</h1>
+  // return (<div>
+  //          <h1>hello ini cara pakai React.createElement</h1>
+  // </div>)
+  return React.createElement(
+    "div",
+    {},
+    React.createElement("h1", {}, "hello ini dgn create element!")
+  )
 }
 
 ReactDOM.render(<MyComponent />, document.getElementById("root"))
 
-// return (<tag> </tag>) <---adalah jsx yg ditulis dalam function js
-//jadi harus dikembalikan dirender di dom
+/*
+jadi kalau mau pakai reac.element 
+caranya rumus sama dia adalah tag,{props},childer isi yg ada di element
+nah mislakan ada 2 kalang maka yg pertama harus disebut 
+nah utk kalang kedua ditulis di paling belakanag dekat kurung penutup
+esbgai crete element yg baru begitu seterunya inicuman asal mulanya saja
+
+
+*/
