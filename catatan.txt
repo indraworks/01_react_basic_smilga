@@ -1,0 +1,28 @@
+//catatan utk pretier kita pilih formatOnSave dan formatOnPaste centang OK
+
+
+tenang react skrng versi yg baru 17 kita unsintall saja 
+unistall create-react-app -g 
+jadi nntisupaya jika update reactnya bisa utk versi yg terbaru 
+bisa di baca di create-react-app npm 
+
+nah tentang jsx jadi gini react ini adalah kumpulan2 dari componet2 
+(kita menyebutnya sebagai compinent)
+yg mana dirender docmpactkan olet tools reat 
+jadi component ini adalah sbuah function yg pnya kembalian return 
+nah didalam return ini kita tulis html2 tag2 kita  nah 
+harus ada 1 bua div kluaran 
+nah syaratnya harus import react from react dan 
+utk merendernya harus import ReactDOM from 'react-dom 
+nah nnti kita akan gunakan ReactDOM.render utk merender function kita tsb 
+nah kita arahkan di bagian html dan settingnya udah default yaitu d tag id="root" 
+disana d rendernya 
+berikut ini pemaparan diatas :
+ syarat jsx :
+//harus 
+import React from 'react';
+import ReactDOM from 'react-dom' 
+
+
+
+
