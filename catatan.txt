@@ -23,6 +23,6 @@ berikut ini pemaparan diatas :
 import React from 'react';
 import ReactDOM from 'react-dom' 
 
-
+RULE JS
 
 

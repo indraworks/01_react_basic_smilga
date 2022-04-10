@@ -3,32 +3,50 @@ import { render } from "@testing-library/react"
 import React from "react"
 import ReactDOM from "react-dom"
 
-//RULE JSC yg perlu diingat
-//1 smua harus 1 kluraan div ,dan haay ada 1 kembalian  kalau banyak div atau kalang tag
-//kembalianjika banya bisa dipakai React.Fragment atau cukup tulis <> </> sbgai kalang penutup
-
-//utk cssnya didalam jsx maka dari class berubah dgn className="bla bla"
-//utk atribute css penggunaanya camelClase
-//pentup tag boleh sebarang div.article/section /Fragment sprti diatas
-//utk format bisa begni
+//NESTED COMPONENT DAN TOOLS
 /*
- return <div> </div>  //ini harus ada diseblaj kana tag utk tag pmbuka 
-                      //kalau tidak dia error
- atau return pakai kurung /parentheses
- return (
-   <div> </div>
- )
+yang perlu diingat pada react sekali lagi hanya ada 1 buah kluaran 
+dari jsx utk dirender,nah jika banyak komponent bagaimana krena 
+hal ini maka dijadikan function2 
+nah ada function utama dibawah ini disebutkan 
+Mycomponent adalah 1 buah function utama yg berisi jsx yg dirender nntinya 
+nah didalamnya dia mis ada anak2 componentlainnya misalkan 
+function Mesagge(){ return ()}
+function Person (){return()}
+nah jadi dalam fucntion utama tadi function2 yg merupaka anak di 
+taruh sbgai element didalam funtion utama ! 
+function Mycomponent( {
+  return ( 
+    <> //jangan lupa pasang fragment karna harus ada 1 tag kluaran sbagai pembungkus  ]
+    <Person/>
+    <Message/>
+    </>
+  )
+})
+
 
 
 */
 
-//ini component yg dikembalikan
-function MyComponent() {
+const MyComponent = () => {
+  return (
+    <>
+      <Person />
+      <Message />
+    </>
+  )
+}
+
+const Person = () => {
   return (
     <div>
-      <h1>hello ini cara pakai React.createElement</h1>
+      {" "}
+      <h2>nama Indara</h2>
     </div>
   )
+}
+const Message = () => {
+  return <h1>hello message baru ini !</h1>
 }
 
 ReactDOM.render(<MyComponent />, document.getElementById("root"))
