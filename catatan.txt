@@ -43,3 +43,39 @@ function BookList () {
         <
     )
 }
+
+
+////////////JS didalam JSX ////////////////
+
+bisa gak javascript nuilis di dalam jsx ?
+bisa syaratnya harus didalam kalang {} dan mereka yg didalam adalah expressi 
+apa itu expressi dibawah ini!:
+Expressions
+An expression is any valid set of literals, variables, operators, and expressions that evaluates to a single value. The value may be a number, a string, or a logical value. Conceptually, there are two types of expressions: those that assign a value to a variable, and those that simply have a value. For example, the expression
+
+x = 7
+
+is an expression that assigns x the value 7. This expression itself evaluates to 7. Such expressions use assignment operators. On the other hand, the expression
+
+3 + 4
+
+simply evaluates to 7; it does not perform an assignment. The operators used in such expressions are referred to simply as operators.
+
+JavaScript has the following kinds of expressions:
+
+Arithmetic: evaluates to a number, for example
+String: evaluates to a character string, for example "Fred" or "234"
+Logical: evaluates to true or false
+The special keyword null denotes a null value. In contrast, variables that have not been assigned a value are undefined, and cannot be used without a run-time error.
+
+Conditional Expressions
+A conditional expression can have one of two values based on a condition. The syntax is
+
+(condition) ? val1 : val2
+If condition is true, the expression has the value of val1, Otherwise it has the value of val2. You can use a conditional expression anywhere you would use a standard expression.
+
+For example,
+
+status = (age >= 18) ? "adult" : "minor"
+This statement assigns the value "adult" to the variable status if age is eighteen or greater. Otherwise, it assigns the value "minor" to status.
+=================================end penjelasan expressi ==================

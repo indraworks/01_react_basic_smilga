@@ -4,23 +4,39 @@ import React from "react"
 import ReactDOM from "react-dom"
 import "./index.css"
 /*
-jadi kita buat buku list img source dari amazon 
-nah utk masukan css kita buat file tersendiri 
-utk css itu nama filenya harsu lengkap dengan eaxtensionnya 
+kita buat jadi 1 dan kita mengerti apa itu props 
+yaitu sama dgn parameter tapi props itu bentu dirinya sebgai paramerer object
+nnti kita lihat nah skgn kita refactor ini jadi 1 masing2
+Book utk semua function component dibawah nah 
+nah perlu diiingaar jadi catatan utk 
+tanya bagaimana menulis java script di bagian jsx?
+atau bagaimana mmbuat variable dlm jsx 
+nah gini keynya kuncinya haris berada dalam tanda brace /kurung kurawal
+{ }
+nah misalkan yg dalam kururn adalah operasi asignment variable maka dia harus [unya nilai bali 
+conto :
+ return ( 
+    {const nil ="2" 
+     console.log(nil)
+    return nil }
+
+ )
+
 
 */
 
 const Booklist = () => {
+  var r = ""
+  const mystatement = "hello good morning"
   return (
     <section className='booklist'>
       <Book />
       <Book />
       <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      {(r = 2)}
+      {2 + 2}
+      {console.log(r)}
+      <h1>{mystatement}</h1>
     </section>
   )
 }
