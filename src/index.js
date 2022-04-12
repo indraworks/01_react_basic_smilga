@@ -18,13 +18,17 @@ const Booklist = () => {
     Author: "BronxBronx",
   }
 
+  //latihan pneggunaan props.children
   return (
     <section className='booklist'>
       <Book
         title={firstBook.Title}
         image={firstBook.Image}
         author={firstBook.Author}
-      />
+      >
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+        voluptate!
+      </Book>
       <Book
         title={secondBook.Title}
         image={secondBook.Image}
@@ -36,16 +40,20 @@ const Booklist = () => {
 
 //props imi adalah parameter yg bertype data object
 //isi element obejctnya terserah bisa aray,bisa variable biasa etc!
-const Book = ({ title, image, author }) => {
-  //const { title, image, author } = props //descturcting utk jsx
-  //bisa langsung diatas parameter ({prop})
-  //console.log("props =", props)
+//const Book = ({ title, image, author, children }) => {
+const Book = (props) => {
+  const { title, image, author, children } = props
 
+  //const { title, image, author } = props //descturcting utk jsx
+  //bisa langsung diatas parameter ({element dari object props})
+  //console.log("props =", props)
+  console.log("props =", props)
   return (
     <article className='book'>
       <img src={image} alt='bookFavorite01' />
 
       <h1 className='mytitle'>{title}</h1>
+      <h6>{children}</h6>
       <h4 className='myauthor'> {author}</h4>
     </article>
   )
@@ -54,15 +62,66 @@ const Book = ({ title, image, author }) => {
 ReactDOM.render(<Booklist />, document.getElementById("root"))
 
 /*
+props children apa ini ?? nah ini dia dia itu adalah merupakan 
+sbuah property paramter yg berada di dalam tag2 yg akan dimasuki 
+parameter di jsx componentn 
+pada contoh diatas kita punya jxsx cmponent Book kita masukan
+nilai param mis title,author,img kedalam jsx componet lewat props
+nah ini kan dari external nah si children ini dia builtin ada dalam rpops
+
+kalaiu kita mau masukan maka dia harus berada di tengah apit dari tag2 jsx componetn
+contoh diatas mis <Book title={Title} author={Author} img={Image}> nah sichilden doinsi tempatnya!   </Book>
+nah sichilder harus berada diapit 
+kit amenpyebutnya props anak atau props children namanya builtin 
+jadi bia dconsole.log jadi akan keluar 2 object 1 log,utk props parameter (title,img,author)
+nahutk childrennya kita tulis sama namanya children 
+<Book> hai children </Bok>
+
+nah dari BookLis =()=> {
+  <Book title={Title} author={Author} img={Image}> <p>Lorem</p><Book>
+}
+
+                                       | ini jangan lupa dimaskan sbgai param ( childrenya)
+nah pada Book =({img,title,author,children})=> {return ()}
+nah kalau yg biasa bisa juga ditulis
+
+
+
+Book =(props)=> {
+  
+  return (
+
+    {children}  <---janga lupa penulisanya harus tanda kurung kurawal 
+    //krn dia berada dalam jsx terserah kalau penempatanya bebas saja 
+    // didalam jsx mau diatas dibawah tengah kiri  kanan gak msalah terserah yg punya web!
+
+  )}
+
+  nah nulis chidlrennya terserah diwiayah jsx ,mau ditas di bawah ata u kiri kanan terserah 
+  {{children}} atau {{props.children }}
+
+  diatas sengaja pake destucto ug laa 
+  const {} = props 
+  nah diconsole.log(props) isinya pada console.log:
+  author: "Cindy Patikasari"
+children: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, voluptate!"
+image: "https://images-na.ssl-images-amazon.com/images/I/81Jg8HF-N1L._AC_UL127_SR127,127_.jpg"
+title: "Mrah Putih Indonesia"
+jadi si children ini builtini didalam props jadi dia parameter ini namany fix
+dia mesti diapit oleh tag maka disebut props.children
+
+
+
+*/
+
+/*
+note:
  const Book = (props) => {
   const { title, image, author } = props //descturcting utk jsx
   
   console.log("props =", props)
    hasil llog tetap sama jadi propnya berupa object dgn element2 ygpunya ilai 
    
-
-
-
 
 */
 
