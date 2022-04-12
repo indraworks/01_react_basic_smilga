@@ -79,3 +79,18 @@ For example,
 status = (age >= 18) ? "adult" : "minor"
 This statement assigns the value "adult" to the variable status if age is eighteen or greater. Otherwise, it assigns the value "minor" to status.
 =================================end penjelasan expressi ==================
+
+///tentan props ////
+props hanay conventional name aslinay bisa apa aja sebarang nama parameter yg pasang 
+dalam function component di JSX
+function Book(props) {
+
+}
+//saya kasih  nama parameternya esDawet 
+//gak masalah tapi ya kita harus ikut convensional dari acuan yg ada!
+const rapikanTheme =(esDawet)=> {
+    return ( )
+}
+dan ingat paramnya itu adalah object ya?! jadi bukan variable ini hanya berlaku di react utk component ini 
+
+
