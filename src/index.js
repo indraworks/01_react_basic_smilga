@@ -36,15 +36,16 @@ const Booklist = () => {
 
 //props imi adalah parameter yg bertype data object
 //isi element obejctnya terserah bisa aray,bisa variable biasa etc!
-const Book = (props) => {
-  const { title, image, author } = props //descturcting utk jsx
-  //kita panggil langsung property keynya /element keynya
-  console.log("props =", props)
+const Book = ({ title, image, author }) => {
+  //const { title, image, author } = props //descturcting utk jsx
+  //bisa langsung diatas parameter ({prop})
+  //console.log("props =", props)
 
   return (
     <article className='book'>
       <img src={image} alt='bookFavorite01' />
-      <h1>{title}</h1>
+
+      <h1 className='mytitle'>{title}</h1>
       <h4 className='myauthor'> {author}</h4>
     </article>
   )

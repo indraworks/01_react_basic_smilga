@@ -93,4 +93,9 @@ const rapikanTheme =(esDawet)=> {
 }
 dan ingat paramnya itu adalah object ya?! jadi bukan variable ini hanya berlaku di react utk component ini 
 
-
+//nah props sbgai parameter bisa di destruting dan bisa langusng di destructing di 
+dalam kruung tempat parameter atau props berada 
+ contoh :
+ const morning=({props})=> {
+     //const {title,price,img} = prop // yg ini sama dgn diatas ({props})
+ }
